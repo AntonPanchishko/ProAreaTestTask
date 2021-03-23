@@ -1,0 +1,12 @@
+language: java
+git:
+  depth: 3
+jdk:
+  - openjdk11
+before_install:
+  - chmod +x mvnw
+script:
+  - mvn clean install
+cache:
+  directories:
+    - $HOME/.m2
