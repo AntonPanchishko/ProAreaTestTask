@@ -1,4 +1,6 @@
 language: java
+before_script:
+  - psql -c 'create database DataBaseForShopService' -U postgres
 git:
   depth: 3
 jdk:
