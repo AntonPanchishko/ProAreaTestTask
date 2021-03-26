@@ -1,4 +1,6 @@
 language: java
+before_script:
+  - psql -c 'create database DataBaseForShopService;' -U postgres
 git:
   depth: 3
 jdk:
@@ -10,3 +12,8 @@ script:
 cache:
   directories:
     - $HOME/.m2
+services:
+  - postgresql
+test:
+  adapter: postgresql
+  database: DataBaseForShopService
