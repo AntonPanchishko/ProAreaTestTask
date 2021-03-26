@@ -1,8 +1,13 @@
 package com.example.proareatesttask.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import lombok.Data;
-
-import javax.persistence.*;
 
 @Entity
 @Data
@@ -10,6 +15,11 @@ public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Enumerated
-    private Roles role;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "role_name", unique = true)
+    private RoleName roleName;
+
+    public enum RoleName {
+        USER, ADMIN;
+    }
 }

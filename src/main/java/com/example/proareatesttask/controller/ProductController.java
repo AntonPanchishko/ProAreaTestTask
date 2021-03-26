@@ -6,10 +6,14 @@ import com.example.proareatesttask.model.dto.request.ProductRequestDto;
 import com.example.proareatesttask.model.dto.response.ProductResponseDto;
 import com.example.proareatesttask.service.ProductService;
 import lombok.AllArgsConstructor;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 @RequestMapping("/products")
 @AllArgsConstructor
 public class ProductController {
@@ -27,5 +31,10 @@ public class ProductController {
         Product product = productMapper.toEntity(productRequestDto);
         product.setId(productId);
         return productMapper.toDto(productService.updateProduct(product));
+    }
+
+    @GetMapping
+    public String get() {
+        return "Hello world";
     }
 }
