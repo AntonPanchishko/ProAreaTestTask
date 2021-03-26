@@ -34,7 +34,7 @@
 * Download and install postgresql Server.
 
 ##### For a login on website 
-1) change database name, username and password in properties 
-2) run following project
-3) for **authentication** use default **username** - user and **password** - 1234
-4) in swagger menu execute POST method in inject controller
+* change database name, username and password in properties
+* run following project
+* for **authentication** use default **username** - user and **password** - 1234
+* in swagger menu execute POST method in inject controller
