@@ -41,7 +41,12 @@ public class MyPdfWriter {
         long finalSum = 0;
         for (Product product : list) {
             finalSum = finalSum + product.getPrice();
+<<<<<<< HEAD
             String currentCheck = product.getProductName() + " " + product.getPrice();
+=======
+            String currentCheck = product.getProductName()
+                    + " " + product.getPrice();
+>>>>>>> origin/LocalBranchForTestTask
             chunks.add(new Chunk(currentCheck, font));
         }
         chunks.add(new Chunk("Order sum = " + finalSum, font));
