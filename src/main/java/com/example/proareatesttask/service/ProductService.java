@@ -8,4 +8,6 @@ public interface ProductService {
     Product updateProduct(Product product);
 
     Product getById(Long id);
+
+    Product getByName(String productName);
 }
