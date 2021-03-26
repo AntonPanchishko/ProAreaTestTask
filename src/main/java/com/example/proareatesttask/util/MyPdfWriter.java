@@ -41,8 +41,7 @@ public class MyPdfWriter {
         long finalSum = 0;
         for (Product product : list) {
             finalSum = finalSum + product.getPrice();
-            String currentCheck = product.getProductName()
-                    + " " + product.getPrice();
+            String currentCheck = product.getProductName() + " " + product.getPrice();
             chunks.add(new Chunk(currentCheck, font));
         }
         chunks.add(new Chunk("Order sum = " + finalSum, font));
